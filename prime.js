@@ -1,21 +1,19 @@
-
-const lowerNumber = 0;
-const higherNumber = 100;
-
-console.log(`The prime numbers between ${lowerNumber} and ${higherNumber} are:`);
-
-
-for (let i = lowerNumber; i <= higherNumber; i++) {
-    let flag = 0;
-
-    
-    for (let j = 2; j < i; j++) {
-        if (i % j == 0) {
-            flag = 1;
-            break;
-        }
+function isprime(n){
+    if (n==1){
+        return false
     }
-    if (i > 1 && flag == 0) {
-        console.log(i);
+    else if (n==2){
+        return true;
+    }
+    else{
+        for (var x=2; x<n; x++){
+            if(n%x===0){
+                return false;
+            }
+        }
+        return true;
+
     }
 }
+console.log (isprime(5));
+
